@@ -47,15 +47,15 @@ A deep exploratory data analysis was conducted to understand distributions, rela
 Analysis of the key numeric features shows that `Sales`, `Profit`, and `Shipping Cost` are heavily right-skewed, indicating that most orders are low-value, with a long tail of high-value outliers.
 
 <p align="center">
-  <img src="assets/slide_5_img_0.png" width="45%" alt="Sales Distribution">
-  <img src="assets/slide_5_img_1.png" width="45%" alt="Profit Distribution">
+  <img src="assets/eda_dist_sales.png" width="45%" alt="Sales Distribution">
+  <img src="assets/eda_dist_profit.png" width="45%" alt="Profit Distribution">
 </p>
 <p align="center">
-  <img src="assets/slide_5_img_2.png" width="45%" alt="Shipping Cost Distribution">
-  <img src="assets/slide_5_img_3.png" width="45%" alt="Discount Distribution">
+  <img src="assets/eda_dist_shipping.png" width="45%" alt="Shipping Cost Distribution">
+  <img src="assets/eda_dist_discount.png" width="45%" alt="Discount Distribution">
 </p>
 <p align="center">
-  <img src="assets/slide_6_img_0.png" width="45%" alt="Profit Distribution Detail">
+  <img src="assets/eda_dist_profit_detail.png" width="45%" alt="Profit Distribution Detail">
 </p>
 
 
@@ -63,7 +63,7 @@ Analysis of the key numeric features shows that `Sales`, `Profit`, and `Shipping
 Box plots confirmed the presence of significant outliers in `Sales` and `Shipping Cost`, which were flagged for careful handling during preprocessing, as they could disproportionately affect model performance.
 
 <p align="center">
-  <img src="assets/slide_8_img_0.png" width="60%" alt="Box Plot of Sales and Shipping Cost">
+  <img src="assets/eda_boxplot_outliers.png" width="60%" alt="Box Plot of Sales and Shipping Cost">
 </p>
 
 
@@ -71,29 +71,30 @@ Box plots confirmed the presence of significant outliers in `Sales` and `Shippin
 A correlation heatmap was generated to understand relationships between numeric variables. It shows a predictable positive correlation between `Sales` and `Profit` and a negative correlation between `Profit` and `Discount`.
 
 <p align="center">
-  <img src="assets/correlation_heatmap.png" width="70%" alt="Correlation Heatmap">
+  <img src="assets/eda_correlation_heatmap.png" width="70%" alt="Correlation Heatmap">
 </p>
 
 The scatter plot below further investigates the `Sales` vs. `Profit` relationship, color-coded by `Discount`. It clearly visualizes that as the discount increases (orange/red dots), profit margins shrink and often become negative, even on high-sales items.
 
 <p align="center">
-  <img src="assets/sales_profit_scatter.png" width="70%" alt="Sales vs. Profit Scatter Plot">
+  <img src="assets/eda_sales_vs_profit_scatter.png" width="70%" alt="Sales vs. Profit Scatter Plot">
 </p>
 
 *(Additional scatter plots from Slide 7)*
 <p align="center">
-  <img src="assets/slide_7_img_0.png" width="45%" alt="Scatter Plot 1">
-  <img src="assets/slide_7_img_1.png" width="45%" alt="Scatter Plot 2">
-  <img src="assets/slide_7_img_2.png" width="45%" alt="Scatter Plot 3">
-  <img src="assets/slide_7_img_3.png" width="45%" alt="Scatter Plot 4">
+  <img src="assets/eda_scatter_sales_shipping.png" width="45%" alt="Scatter Plot 1">
+  <img src="assets/eda_scatter_sales_profit.png" width="45%" alt="Scatter Plot 2">
+  <img src="assets/eda_scatter_profit_discount.png" width="45%" alt="Scatter Plot 3">
+  <img src="assets/eda_scatter_profit_shipping.png" width="45%" alt="Scatter Plot 4">
 </p>
 
 **Category Analysis (from Slide 9):**
 Hierarchical charts were used to visualize the relationship between categories, sub-categories, and profit. This helped identify `Tables` and `Bookcases` as major sources of negative profit, despite their sales volume.
 
 <p align="center">
-  <img src="assets/slide_9_img_0.png" width="45%" alt="Sunburst Chart">
-  <img src="assets/slide_9_img_1.png" width="45%" alt="Heatmap Detail">
+  <img src="assets/eda_sunburst_category_profit.png" width="45%" alt="Sunburst Chart">
+  <img src="assets/eda_heatmap_category_profit.png" width="45%" alt="Heatmap Detail">
+  <img src="assets/eda_heatmap_subcategory_profit.png" width="45%" alt="Subcategory Heatmap Detail">
 </p>
 
 ### 3. Feature Selection
@@ -113,7 +114,7 @@ A feature selection process was employed to identify and retain the most impactf
 The models were evaluated based on their Root Mean Squared Error (RMSE) and R² (labeled as Accuracy % in the report) on the test set. The **XGBoost Regressor** was the definitive best-performing model.
 
 <p align="center">
-  <img src="assets/model_comparison.png" width="70%" alt="Model Performance Comparison">
+  <img src="assets/model_performance_comparison.png" width="70%" alt="Model Performance Comparison">
 </p>
 
 ### Model Performance Summary
