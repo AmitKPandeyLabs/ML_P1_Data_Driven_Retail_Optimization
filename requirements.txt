@@ -1,0 +1,17 @@
+# --- Core Data Science Libraries ---
+numpy               # Fundamental package for numerical computing
+pandas              # For data manipulation, cleaning, and analysis (reading CSV)
+
+# --- Visualization Libraries ---
+matplotlib          # For creating static and interactive plots
+seaborn             # High-level visualization library based on matplotlib
+
+# --- Machine Learning & Modeling ---
+scikit-learn        # Core ML library (for StandardScaler, train_test_split, all models)
+xgboost             # High-performance gradient boosting model (the winning model)
+lightgbm            # Fast, high-performance gradient boosting model (alternative)
+catboost            # Gradient boosting model that handles categorical data (alternative)
+ngboost             # Natural Gradient Boosting for probabilistic predictions (alternative)
+
+# --- Notebook Environment ---
+jupyter             # To run the .ipynb notebook environment
