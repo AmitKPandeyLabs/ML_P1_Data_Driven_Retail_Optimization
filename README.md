@@ -55,7 +55,7 @@ Analysis of the key numeric features shows that `Sales`, `Profit`, and `Shipping
   <img src="assets/eda_dist_segment.png" width="45%" alt="Discount Distribution">
 </p>
 <p align="center">
-  <img src="assets/sales_profit_scatter.png" width="45%" alt="Profit Distribution Detail">
+  <img src="assets/eda_region_profit_shipmode.png" width="45%" alt="Profit Distribution Detail">
 </p>
 
 
