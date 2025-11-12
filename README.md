@@ -54,8 +54,10 @@ A review of the core data distributions revealed critical insights. The histogra
   <img src="assets/eda_dist_shipping.png" width="45%" alt="Shipping Cost Distribution">
   <img src="assets/eda_dist_segment.png" width="45%" alt="Discount Distribution">
 </p>
+ The histograms for segement wise ditribution across regions.
+
 <p align="center">
-  <img src="assets/eda_region_profit_shipmode.png" width="60%" alt="Profit shipmode Distribution Detail">
+  <img src="assets/eda_region_profit_shipmode.png" width="70%" alt="Profit shipmode Distribution Detail">
 </p>
 
 
