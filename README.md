@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Pandas-2.0%2B-purple.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
 </p>
 
-This repository contains the end-to-end machine learning project "Data-Driven Retail Optimization," completed as part of the Applied Machine Learning course (BUAN 6341). The project focuses on analyzing a large retail dataset to predict sales and uncover actionable business insights.
+This repository contains the end-to-end machine learning project "Data-Driven Retail Optimization." The project focuses on analyzing a large retail dataset to predict sales and uncover actionable business insights.
 
 ## 🎯 Project Overview & Business Problem
 
@@ -43,7 +43,7 @@ The project followed a structured machine learning pipeline:
 ### 2. Exploratory Data Analysis (EDA)
 A deep exploratory data analysis was conducted to understand distributions, relationships, and outliers. Here are the key findings from the analysis:
 
-**Data Distributions (from Slide 5):**
+**Data Distributions:**
 Analysis of the key numeric features shows that `Sales`, `Profit`, and `Shipping Cost` are heavily right-skewed, indicating that most orders are low-value, with a long tail of high-value outliers.
 
 <p align="center">
@@ -59,7 +59,7 @@ Analysis of the key numeric features shows that `Sales`, `Profit`, and `Shipping
 </p>
 
 
-**Outlier Analysis (from Slide 8):**
+**Outlier Analysis:**
 Box plots confirmed the presence of significant outliers in `Sales` and `Shipping Cost`, which were flagged for careful handling during preprocessing, as they could disproportionately affect model performance.
 
 <p align="center">
@@ -80,7 +80,7 @@ The scatter plot below further investigates the `Sales` vs. `Profit` relationshi
   <img src="assets/sales_profit_scatter.png" width="70%" alt="Sales vs. Profit Scatter Plot">
 </p>
 
-*(Additional scatter plots from Slide 7)*
+*(Additional scatter plots showing various feature relationships)*
 <p align="center">
   <img src="assets/eda_scatter_sales_shipping.png" width="45%" alt="Scatter Plot 1">
   <img src="assets/eda_scatter_sales_profit.png" width="45%" alt="Scatter Plot 2">
@@ -88,7 +88,7 @@ The scatter plot below further investigates the `Sales` vs. `Profit` relationshi
   <img src="assets/eda_scatter_profit_shipping.png" width="45%" alt="Scatter Plot 4">
 </p>
 
-**Category Analysis (from Slide 9):**
+**Category Analysis:**
 Hierarchical charts were used to visualize the relationship between categories, sub-categories, and profit. This helped identify `Tables` and `Bookcases` as major sources of negative profit, despite their sales volume.
 
 <p align="center">
