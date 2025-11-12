@@ -135,7 +135,6 @@ The final models were evaluated based on their Root Mean Squared Error (RMSE) an
 | Random Forest Regressor | 41.67 | 77.91% |
 | Gradient Boosting Regressor | 38.82 | 80.83% |
 | **XGBoost Regressor** | **38.44** | **81.20%** |
-*(Data sourced from project presentation)*
 
 </div>
 
