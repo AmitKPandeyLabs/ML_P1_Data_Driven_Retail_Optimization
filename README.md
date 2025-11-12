@@ -114,7 +114,7 @@ A feature selection process was employed to identify and retain the most impactf
 The models were evaluated based on their Root Mean Squared Error (RMSE) and R² (labeled as Accuracy % in the report) on the test set. The **XGBoost Regressor** was the definitive best-performing model.
 
 <p align="center">
-  <img src="assets/performance_comparison.png" width="70%" alt="Model Performance Comparison">
+  <img src="assets/model_comparison.png" width="70%" alt="Model Performance Comparison">
 </p>
 
 ### Model Performance Summary
