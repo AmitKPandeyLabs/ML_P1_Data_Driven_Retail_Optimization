@@ -125,4 +125,32 @@ The final models were evaluated based on their Root Mean Squared Error (RMSE) an
 | **XGBoost Regressor** | **38.44** | **81.20%** |
 *(Data sourced from project presentation)*
 
-**Key Finding:** The **XGBoost Regressor** was the definitive winner, providing the highest accuracy (81.20%) and the lowest error (RMSE: 3
+**Key Finding:** The **XGBoost Regressor** was the definitive winner, providing the highest accuracy (81.20%) and the lowest error (RMSE: 38.44). This chart justifies the final model choice and demonstrates a methodical, comparative approach to model selection. The Random Forest model, while strong, showed signs of overfitting compared to the more robust boosting models.
+
+## 🛠️ Tools & Technologies Used
+
+* **Python:** Core programming language for analysis and modeling.
+* **Pandas:** For data manipulation, cleaning, and preprocessing.
+* **Matplotlib & Seaborn:** For exploratory data analysis and visualization.
+* **Scikit-learn (sklearn):** For data splitting, standardization, and implementing Ridge, Random Forest, and Gradient Boosting models.
+* **XGBoost:** For implementing the best-performing XGBoost Regressor model.
+* **Jupyter Notebook:** For interactive code development and analysis.
+
+## 🚀 How to Run This Project
+
+1.  Clone this repository to your local machine:
+    ```sh
+    git clone [https://github.com/AmitKPandeyLabs/ML_P1_Data_Driven_Retail_Optimization.git](https://github.com/AmitKPandeyLabs/ML_P1_Data_Driven_Retail_Optimization.git)
+    ```
+2.  Navigate to the project directory:
+    ```sh
+    cd ML_P1_Data_Driven_Retail_Optimization
+    ```
+3.  Install the required dependencies (you can create a `requirements.txt` file for this):
+    ```sh
+    pip install pandas numpy matplotlib seaborn scikit-learn xgboost jupyter
+    ```
+4.  Open the Jupyter Notebook to view and run the analysis:
+    ```sh
+    jupyter notebook "Superstore Sales Prediction using Machine Learning.ipynb"
+    ```
