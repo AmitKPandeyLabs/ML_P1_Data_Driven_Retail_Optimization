@@ -96,7 +96,7 @@ This negative correlation is the most important finding. The scatter plot below 
 **Category Analysis:**
 The sunburst chart was used to drill down into *where* the unprofitability is coming from. By visualizing profit by category and sub-category, it becomes clear that specific product lines, such as **'Tables' and 'Bookcases', are major sources of negative profit**, even when they have high sales volume. This provides a surgical, actionable insight rather than just a general warning.
 
-<p align="visible">
+<p align="center">
   <img src="assets/eda_sunburst_category.png" width="65%" alt="Sunburst Chart">
 </p>
 
@@ -125,6 +125,8 @@ The final models were evaluated based on their Root Mean Squared Error (RMSE) an
   <img src="assets/model_comparison.png" width="70%" alt="Model Performance Comparison">
 </p>
 
+<div align="center">
+
 ### Model Performance Summary
 
 | Model | RMSE | R² (Accuracy) |
@@ -135,9 +137,11 @@ The final models were evaluated based on their Root Mean Squared Error (RMSE) an
 | **XGBoost Regressor** | **38.44** | **81.20%** |
 *(Data sourced from project presentation)*
 
+</div>
+
 **Key Finding:** The **XGBoost Regressor** was the definitive winner, providing the highest accuracy (81.20%) and the lowest error (RMSE: 38.44). This justifies the final model choice and demonstrates a methodical, comparative approach to model selection. The Random Forest model, while strong, showed signs of overfitting (significantly lower training error than test error) compared to the more robust boosting models.
 
-## 🏁 Conclusion
+## 📌 Conclusion
 The analysis concludes that the **XGBoost Regressor (RMSE: 38.44, R²: 81.20%)** is the most accurate and suitable model for predicting sales for this dataset.
 
 Furthermore, the EDA provided critical business insights, most notably that the company's discount strategy is a major source of unprofitability, especially in the **'Tables'** and **'Bookcases'** sub-categories. A key business recommendation is to strategically re-evaluate and adjust discount policies for these specific unprofitable product lines to improve overall profitability.
