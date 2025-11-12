@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Pandas-2.0%2B-purple.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
 </p>
 
-This repository contains the end-to-end machine learning project "Data-Driven Retail Optimization." The project focuses on analyzing a large retail dataset to predict sales and uncover actionable business insights.
+This repository contains an end-to-end machine learning project on "Data-Driven Retail Optimization." The project focuses on analyzing a large retail dataset to predict sales and uncover actionable business insights.
 
 ## 🎯 Project Overview & Business Problem
 
@@ -44,7 +44,7 @@ The project followed a structured machine learning pipeline:
 A deep exploratory data analysis was conducted to understand distributions, relationships, and outliers. Here are the key findings from the analysis:
 
 **Data Distributions:**
-A review of the core data distributions revealed critical insights. The histograms for `Sales` (`assets/eda_dist_sales.png`) and `Shipping Cost` (`assets/eda_dist_shipping.png`) are heavily **right-skewed**. This indicates that the vast majority of orders are small, low-value transactions, with a few significant outliers. Understanding this skewness is essential for preprocessing, as models can be disproportionately affected by these extreme values.
+A review of the core data distributions revealed critical insights. The histograms for `Sales` and `Shipping Cost` are heavily **right-skewed**, indicating that the vast majority of orders are small, low-value transactions, with a few significant, high-value outliers. This skewness is a key finding for preprocessing, as models can be disproportionately affected by these extreme values.
 
 <p align="center">
   <img src="assets/eda_dist_sales.png" width="45%" alt="Sales Distribution">
@@ -60,7 +60,7 @@ A review of the core data distributions revealed critical insights. The histogra
 
 
 **Outlier Analysis:**
-The box plot (`assets/eda_boxplot_outliers.png`) provides a clear visual confirmation of the distribution skewness identified in the histograms. It shows a large number of data points for `Sales` and `Shipping Cost` existing far beyond the standard range (the "whiskers"). This diagnostic plot reinforces the need for data scaling or transformations to build a robust model.
+The box plot provides a clear visual confirmation of the distribution skewness found in the histograms. It shows a large number of data points for `Sales` and `Shipping Cost` existing far beyond the standard range (the "whiskers"). This diagnostic plot reinforces the need for robust data scaling or transformations to build a reliable model.
 
 <p align="center">
   <img src="assets/eda_boxplot_outliers.png" width="60%" alt="Box Plot of Sales and Shipping Cost">
@@ -68,13 +68,13 @@ The box plot (`assets/eda_boxplot_outliers.png`) provides a clear visual confirm
 
 
 **Feature Relationships (Heatmap & Scatter Plots):**
-To understand the drivers of profit, a correlation heatmap (`assets/correlation_heatmap.png`) was generated. It reveals the first major business insight: a predictable positive link between `Sales` and `Profit`, but a strong **negative correlation between `Profit` and `Discount`**.
+To understand the drivers of profit, a correlation heatmap was generated. It reveals the first major business insight: a predictable positive link between `Sales` and `Profit`, but a strong **negative correlation between `Profit` and `Discount`**.
 
 <p align="center">
   <img src="assets/correlation_heatmap.png" width="70%" alt="Correlation Heatmap">
 </p>
 
-This negative correlation is the most important finding. The `assets/sales_profit_scatter.png` plot below provides the visual proof. It clearly shows that as the `Discount` (represented by the color) increases, `Profit` trends down, often plunging into negative territory (below the 0-line). This insight pinpoints a critical flaw in the store's promotional strategy: **discounts are actively driving unprofitability** on many transactions.
+This negative correlation is the most important finding. The scatter plot below provides the visual proof, investigating the `Sales` vs. `Profit` relationship, color-coded by `Discount`. It clearly visualizes that as the `Discount` increases (orange/red dots), `Profit` trends down, often plunging into negative territory (below the 0-line). This insight pinpoints a critical flaw in the store's promotional strategy: **discounts are actively driving unprofitability** on many transactions.
 
 <p align="center">
   <img src="assets/sales_profit_scatter.png" width="70%" alt="Sales vs. Profit Scatter Plot">
@@ -89,7 +89,7 @@ This negative correlation is the most important finding. The `assets/sales_profi
 </p>
 
 **Category Analysis:**
-The sunburst chart (`assets/eda_sunburst_category.png`) was used to drill down into *where* the unprofitability is coming from. By visualizing profit by category and sub-category, it becomes clear that specific product lines, such as **'Tables' and 'Bookcases', are major sources of negative profit**, even when they have high sales volume. This provides a surgical, actionable insight rather than just a general warning.
+The sunburst chart was used to drill down into *where* the unprofitability is coming from. By visualizing profit by category and sub-category, it becomes clear that specific product lines, such as **'Tables' and 'Bookcases', are major sources of negative profit**, even when they have high sales volume. This provides a surgical, actionable insight rather than just a general warning.
 
 <p align="center">
   <img src="assets/eda_sunburst_category.png" width="65%" alt="Sunburst Chart">
@@ -109,7 +109,7 @@ A feature selection process was employed to identify and retain the most impactf
 
 ## 📈 Results & Key Findings
 
-The final models were evaluated based on their Root Mean Squared Error (RMSE) and R² (labeled as Accuracy % in the report) on the test set. The bar chart (`assets/model_comparison.png`) provides a clear visual summary of the results, comparing the error rates of all tested models.
+The final models were evaluated based on their Root Mean Squared Error (RMSE) and R² on the test set. The bar chart provides a clear visual summary of the results, comparing the error rates of all tested models and providing the "proof" of the work.
 
 <p align="center">
   <img src="assets/model_comparison.png" width="70%" alt="Model Performance Comparison">
@@ -125,7 +125,7 @@ The final models were evaluated based on their Root Mean Squared Error (RMSE) an
 | **XGBoost Regressor** | **38.44** | **81.20%** |
 *(Data sourced from project presentation)*
 
-**Key Finding:** The **XGBoost Regressor** was the definitive winner, providing the highest accuracy (81.20%) and the lowest error (RMSE: 38.44). This chart justifies the final model choice and demonstrates a methodical, comparative approach to model selection. The Random Forest model, while strong, showed signs of overfitting compared to the more robust boosting models.
+**Key Finding:** The **XGBoost Regressor** was the definitive winner, providing the highest accuracy (81.20%) and the lowest error (RMSE: 38.44). This justifies the final model choice and demonstrates a methodical, comparative approach to model selection. The Random Forest model, while strong, showed signs of overfitting compared to the more robust boosting models.
 
 ## 🛠️ Tools & Technologies Used
 
