@@ -99,6 +99,9 @@ The sunburst chart was used to drill down into *where* the unprofitability is co
 
 ### 3. Feature Selection
 A feature selection process was employed to identify and retain the most impactful features for predicting sales, reducing model complexity and improving performance.
+<p align="center">
+  <img src="assets/Feature_selection.png" width="65%" alt="Feature Selection">
+</p>
 
 ### 4. Model Implementation & Tuning
 * Split the data into training and test sets.
