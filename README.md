@@ -14,9 +14,9 @@ This repository contains the end-to-end machine learning project "Data-Driven Re
 The retail industry is evolving rapidly, and businesses must leverage data to remain competitive. This project focuses on using data-driven approaches to enhance profitability and streamline operations for a large superstore.
 
 The primary business motivations for this project were:
-* [cite_start]**Business Insights:** Analyze sales data to uncover trends and customer behaviors that influence business strategies.
-* [cite_start]**Profitability:** Understand the complex relationship between discounts, sales, and profits to optimize pricing and promotional strategies.
-* [cite_start]**Operational Efficiency:** Streamline logistics and supply chain processes by analyzing shipping data.
+* **Business Insights:** Analyze sales data to uncover trends and customer behaviors that influence business strategies.
+* **Profitability:** Understand the complex relationship between discounts, sales, and profits to optimize pricing and promotional strategies.
+* **Operational Efficiency:** Streamline logistics and supply chain processes by analyzing shipping data.
 
 The technical goal was to preprocess a complex dataset, perform deep exploratory data analysis, and implement several regression models to accurately predict `Sales`.
 
@@ -35,32 +35,86 @@ The dataset is a comprehensive "Superstore" dataset containing transaction-level
 
 The project followed a structured machine learning pipeline:
 
-1.  **Data Preprocessing:**
-    * [cite_start]Cleaned the data by dropping rows with null values.
-    * [cite_start]Applied **Label Encoding** to transform object-type (categorical) features into a machine-readable format.
-    * [cite_start]Standardized all feature data to ensure models were not biased by features with different scales.
+### 1. Data Preprocessing
+* Cleaned the data by dropping rows with null values.
+* Applied **Label Encoding** to transform object-type (categorical) features into a machine-readable format.
+* Standardized all feature data to ensure models were not biased by features with different scales.
 
-2.  **Exploratory Data Analysis (EDA):**
-    * [cite_start]Analyzed data distributions, identifying that most sales are low-value with a long tail of high-value outliers.
-    * [cite_start]Used **scatter plots** to analyze the relationship between `Sales` and `Profit`, revealing that higher discounts often correlated with reduced profits.
-    * [cite_start]Generated **box plots** to identify outliers in `Shipping Cost` and `Sales`.
-    * [cite_start]Created a **heat map** to visualize correlations between all numeric features.
+### 2. Exploratory Data Analysis (EDA)
+A deep exploratory data analysis was conducted to understand distributions, relationships, and outliers. Here are the key findings from the analysis:
 
-3.  **Feature Selection:**
-    * A feature selection process was employed to identify and retain the most impactful features for predicting sales, reducing model complexity and improving performance.
+**Data Distributions (from Slide 5):**
+Analysis of the key numeric features shows that `Sales`, `Profit`, and `Shipping Cost` are heavily right-skewed, indicating that most orders are low-value, with a long tail of high-value outliers.
 
-4.  **Model Implementation & Tuning:**
-    * Split the data into training and test sets.
-    * Trained and evaluated four different regression models to compare performance:
-        1.  **Ridge Regression (with Polynomial Features)**
-        2.  **Random Forest Regressor**
-        3.  **Gradient Boosting Regressor**
-        4.  **XGBoost Regressor**
-    * [cite_start]Hyperparameter tuning was performed on the models to achieve optimal performance.
+<p align="center">
+  <img src="assets/slide_5_img_0.png" width="45%" alt="Sales Distribution">
+  <img src="assets/slide_5_img_1.png" width="45%" alt="Profit Distribution">
+</p>
+<p align="center">
+  <img src="assets/slide_5_img_2.png" width="45%" alt="Shipping Cost Distribution">
+  <img src="assets/slide_5_img_3.png" width="45%" alt="Discount Distribution">
+</p>
+<p align="center">
+  <img src="assets/slide_6_img_0.png" width="45%" alt="Profit Distribution Detail">
+</p>
+
+
+**Outlier Analysis (from Slide 8):**
+Box plots confirmed the presence of significant outliers in `Sales` and `Shipping Cost`, which were flagged for careful handling during preprocessing, as they could disproportionately affect model performance.
+
+<p align="center">
+  <img src="assets/slide_8_img_0.png" width="60%" alt="Box Plot of Sales and Shipping Cost">
+</p>
+
+
+**Feature Relationships (Heatmap & Scatter Plots):**
+A correlation heatmap was generated to understand relationships between numeric variables. It shows a predictable positive correlation between `Sales` and `Profit` and a negative correlation between `Profit` and `Discount`.
+
+<p align="center">
+  <img src="assets/plot_correlation_heatmap.png" width="70%" alt="Correlation Heatmap">
+</p>
+
+The scatter plot below further investigates the `Sales` vs. `Profit` relationship, color-coded by `Discount`. It clearly visualizes that as the discount increases (orange/red dots), profit margins shrink and often become negative, even on high-sales items.
+
+<p align="center">
+  <img src="assets/plot_sales_profit_scatter.png" width="70%" alt="Sales vs. Profit Scatter Plot">
+</p>
+
+*(Additional scatter plots from Slide 7)*
+<p align="center">
+  <img src="assets/slide_7_img_0.png" width="45%" alt="Scatter Plot 1">
+  <img src="assets/slide_7_img_1.png" width="45%" alt="Scatter Plot 2">
+  <img src="assets/slide_7_img_2.png" width="45%" alt="Scatter Plot 3">
+  <img src="assets/slide_7_img_3.png" width="45%" alt="Scatter Plot 4">
+</p>
+
+**Category Analysis (from Slide 9):**
+Hierarchical charts were used to visualize the relationship between categories, sub-categories, and profit. This helped identify `Tables` and `Bookcases` as major sources of negative profit, despite their sales volume.
+
+<p align="center">
+  <img src="assets/slide_9_img_0.png" width="45%" alt="Sunburst Chart">
+  <img src="assets/slide_9_img_1.png" width="45%" alt="Heatmap Detail">
+</p>
+
+### 3. Feature Selection
+A feature selection process was employed to identify and retain the most impactful features for predicting sales, reducing model complexity and improving performance.
+
+### 4. Model Implementation & Tuning
+* Split the data into training and test sets.
+* Trained and evaluated four different regression models to compare performance:
+    1.  **Ridge Regression (with Polynomial Features)**
+    2.  **Random Forest Regressor**
+    3.  **Gradient Boosting Regressor**
+    4.  **XGBoost Regressor**
+* Hyperparameter tuning was performed on the models to achieve optimal performance.
 
 ## 📈 Results & Key Findings
 
 The models were evaluated based on their Root Mean Squared Error (RMSE) and R² (labeled as Accuracy % in the report) on the test set. The **XGBoost Regressor** was the definitive best-performing model.
+
+<p align="center">
+  <img src="assets/plot_model_comparison.png" width="70%" alt="Model Performance Comparison">
+</p>
 
 ### Model Performance Summary
 
@@ -70,9 +124,9 @@ The models were evaluated based on their Root Mean Squared Error (RMSE) and R² 
 | Random Forest Regressor | 41.67 | 77.91% |
 | Gradient Boosting Regressor | 38.82 | 80.83% |
 | **XGBoost Regressor** | **38.44** | **81.20%** |
-[cite_start]*(Data sourced from project presentation )*
+*(Data sourced from project presentation)*
 
-[cite_start]**Key Finding:** The **XGBoost Regressor** provided the highest accuracy (81.20%) and the lowest error (RMSE: 38.44), making it the most reliable model for predicting sales. [cite_start]The Random Forest model, while strong, showed signs of overfitting compared to the boosting models.
+**Key Finding:** The **XGBoost Regressor** provided the highest accuracy (81.20%) and the lowest error (RMSE: 38.44), making it the most reliable model for predicting sales. The Random Forest model, while strong, showed signs of overfitting compared to the boosting models.
 
 ## 🛠️ Tools & Technologies Used
 
