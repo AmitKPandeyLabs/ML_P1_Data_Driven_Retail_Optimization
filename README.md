@@ -48,14 +48,14 @@ Analysis of the key numeric features shows that `Sales`, `Profit`, and `Shipping
 
 <p align="center">
   <img src="assets/eda_dist_sales.png" width="45%" alt="Sales Distribution">
-  <img src="assets/eda_dist_profit.png" width="45%" alt="Profit Distribution">
+  <img src="assets/eda_dist_category.png" width="45%" alt="Profit Distribution">
 </p>
 <p align="center">
   <img src="assets/eda_dist_shipping.png" width="45%" alt="Shipping Cost Distribution">
-  <img src="assets/eda_dist_discount.png" width="45%" alt="Discount Distribution">
+  <img src="assets/eda_dist_segment.png" width="45%" alt="Discount Distribution">
 </p>
 <p align="center">
-  <img src="assets/eda_dist_profit_detail.png" width="45%" alt="Profit Distribution Detail">
+  <img src="assets/sales_profit_scatter.png" width="45%" alt="Profit Distribution Detail">
 </p>
 
 
@@ -93,8 +93,7 @@ Hierarchical charts were used to visualize the relationship between categories, 
 
 <p align="center">
   <img src="assets/eda_sunburst_category_profit.png" width="45%" alt="Sunburst Chart">
-  <img src="assets/eda_heatmap_category_profit.png" width="45%" alt="Heatmap Detail">
-  <img src="assets/eda_heatmap_subcategory_profit.png" width="45%" alt="Subcategory Heatmap Detail">
+  <img src="assets/eda_sunburst_category_profit2.png" width="45%" alt="Sunburst Chart Subcategory">
 </p>
 
 ### 3. Feature Selection
