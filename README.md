@@ -71,13 +71,13 @@ Box plots confirmed the presence of significant outliers in `Sales` and `Shippin
 A correlation heatmap was generated to understand relationships between numeric variables. It shows a predictable positive correlation between `Sales` and `Profit` and a negative correlation between `Profit` and `Discount`.
 
 <p align="center">
-  <img src="assets/plot_correlation_heatmap.png" width="70%" alt="Correlation Heatmap">
+  <img src="assets/correlation_heatmap.png" width="70%" alt="Correlation Heatmap">
 </p>
 
 The scatter plot below further investigates the `Sales` vs. `Profit` relationship, color-coded by `Discount`. It clearly visualizes that as the discount increases (orange/red dots), profit margins shrink and often become negative, even on high-sales items.
 
 <p align="center">
-  <img src="assets/plot_sales_profit_scatter.png" width="70%" alt="Sales vs. Profit Scatter Plot">
+  <img src="assets/sales_profit_scatter.png" width="70%" alt="Sales vs. Profit Scatter Plot">
 </p>
 
 *(Additional scatter plots from Slide 7)*
@@ -113,7 +113,7 @@ A feature selection process was employed to identify and retain the most impactf
 The models were evaluated based on their Root Mean Squared Error (RMSE) and R² (labeled as Accuracy % in the report) on the test set. The **XGBoost Regressor** was the definitive best-performing model.
 
 <p align="center">
-  <img src="assets/plot_model_comparison.png" width="70%" alt="Model Performance Comparison">
+  <img src="assets/model_comparison.png" width="70%" alt="Model Performance Comparison">
 </p>
 
 ### Model Performance Summary
