@@ -171,5 +171,5 @@ Furthermore, the EDA provided critical business insights, most notably that the 
     ```
 4.  Open the Jupyter Notebook to view and run the analysis:
     ```sh
-    jupyter notebook "Superstore Sales Prediction using Machine Learning.ipynb"
+    jupyter notebook "Superstore_Sales_Prediction_using_Machine_Learning.ipynb"
     ```
