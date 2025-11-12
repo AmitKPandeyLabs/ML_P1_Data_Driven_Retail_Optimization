@@ -55,7 +55,7 @@ Analysis of the key numeric features shows that `Sales`, `Profit`, and `Shipping
   <img src="assets/eda_dist_segment.png" width="45%" alt="Discount Distribution">
 </p>
 <p align="center">
-  <img src="assets/eda_region_profit_shipmode.png" width="45%" alt="Profit Distribution Detail">
+  <img src="assets/eda_region_profit_shipmode.png" width="60%" alt="Profit shipmode Distribution Detail">
 </p>
 
 
@@ -92,8 +92,7 @@ The scatter plot below further investigates the `Sales` vs. `Profit` relationshi
 Hierarchical charts were used to visualize the relationship between categories, sub-categories, and profit. This helped identify `Tables` and `Bookcases` as major sources of negative profit, despite their sales volume.
 
 <p align="center">
-  <img src="assets/eda_sunburst_category_profit.png" width="45%" alt="Sunburst Chart">
-  <img src="assets/eda_sunburst_category_profit2.png" width="45%" alt="Sunburst Chart Subcategory">
+  <img src="assets/eda_sunburst_category.png" width="65%" alt="Sunburst Chart">
 </p>
 
 ### 3. Feature Selection
