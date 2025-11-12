@@ -166,7 +166,7 @@ Furthermore, the EDA provided critical business insights, most notably that the 
     ```
 3.  Install the required dependencies (you can create a `requirements.txt` file for this):
     ```sh
-    pip install pandas numpy matplotlib seaborn scikit-learn xgboost jupyter
+    pip install -r requirements.txt
     ```
 4.  Open the Jupyter Notebook to view and run the analysis:
     ```sh
