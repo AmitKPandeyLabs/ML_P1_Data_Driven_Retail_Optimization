@@ -44,7 +44,7 @@ The project followed a structured machine learning pipeline:
 A deep exploratory data analysis was conducted to understand distributions, relationships, and outliers. Here are the key findings from the analysis:
 
 **Data Distributions:**
-Analysis of the key numeric features shows that `Sales`, `Profit`, and `Shipping Cost` are heavily right-skewed, indicating that most orders are low-value, with a long tail of high-value outliers.
+A review of the core data distributions revealed critical insights. The histograms for `Sales` (`assets/eda_dist_sales.png`) and `Shipping Cost` (`assets/eda_dist_shipping.png`) are heavily **right-skewed**. This indicates that the vast majority of orders are small, low-value transactions, with a few significant outliers. Understanding this skewness is essential for preprocessing, as models can be disproportionately affected by these extreme values.
 
 <p align="center">
   <img src="assets/eda_dist_sales.png" width="45%" alt="Sales Distribution">
@@ -60,7 +60,7 @@ Analysis of the key numeric features shows that `Sales`, `Profit`, and `Shipping
 
 
 **Outlier Analysis:**
-Box plots confirmed the presence of significant outliers in `Sales` and `Shipping Cost`, which were flagged for careful handling during preprocessing, as they could disproportionately affect model performance.
+The box plot (`assets/eda_boxplot_outliers.png`) provides a clear visual confirmation of the distribution skewness identified in the histograms. It shows a large number of data points for `Sales` and `Shipping Cost` existing far beyond the standard range (the "whiskers"). This diagnostic plot reinforces the need for data scaling or transformations to build a robust model.
 
 <p align="center">
   <img src="assets/eda_boxplot_outliers.png" width="60%" alt="Box Plot of Sales and Shipping Cost">
@@ -68,13 +68,13 @@ Box plots confirmed the presence of significant outliers in `Sales` and `Shippin
 
 
 **Feature Relationships (Heatmap & Scatter Plots):**
-A correlation heatmap was generated to understand relationships between numeric variables. It shows a predictable positive correlation between `Sales` and `Profit` and a negative correlation between `Profit` and `Discount`.
+To understand the drivers of profit, a correlation heatmap (`assets/correlation_heatmap.png`) was generated. It reveals the first major business insight: a predictable positive link between `Sales` and `Profit`, but a strong **negative correlation between `Profit` and `Discount`**.
 
 <p align="center">
   <img src="assets/correlation_heatmap.png" width="70%" alt="Correlation Heatmap">
 </p>
 
-The scatter plot below further investigates the `Sales` vs. `Profit` relationship, color-coded by `Discount`. It clearly visualizes that as the discount increases (orange/red dots), profit margins shrink and often become negative, even on high-sales items.
+This negative correlation is the most important finding. The `assets/sales_profit_scatter.png` plot below provides the visual proof. It clearly shows that as the `Discount` (represented by the color) increases, `Profit` trends down, often plunging into negative territory (below the 0-line). This insight pinpoints a critical flaw in the store's promotional strategy: **discounts are actively driving unprofitability** on many transactions.
 
 <p align="center">
   <img src="assets/sales_profit_scatter.png" width="70%" alt="Sales vs. Profit Scatter Plot">
@@ -89,7 +89,7 @@ The scatter plot below further investigates the `Sales` vs. `Profit` relationshi
 </p>
 
 **Category Analysis:**
-Hierarchical charts were used to visualize the relationship between categories, sub-categories, and profit. This helped identify `Tables` and `Bookcases` as major sources of negative profit, despite their sales volume.
+The sunburst chart (`assets/eda_sunburst_category.png`) was used to drill down into *where* the unprofitability is coming from. By visualizing profit by category and sub-category, it becomes clear that specific product lines, such as **'Tables' and 'Bookcases', are major sources of negative profit**, even when they have high sales volume. This provides a surgical, actionable insight rather than just a general warning.
 
 <p align="center">
   <img src="assets/eda_sunburst_category.png" width="65%" alt="Sunburst Chart">
@@ -109,7 +109,7 @@ A feature selection process was employed to identify and retain the most impactf
 
 ## 📈 Results & Key Findings
 
-The models were evaluated based on their Root Mean Squared Error (RMSE) and R² (labeled as Accuracy % in the report) on the test set. The **XGBoost Regressor** was the definitive best-performing model.
+The final models were evaluated based on their Root Mean Squared Error (RMSE) and R² (labeled as Accuracy % in the report) on the test set. The bar chart (`assets/model_comparison.png`) provides a clear visual summary of the results, comparing the error rates of all tested models.
 
 <p align="center">
   <img src="assets/model_comparison.png" width="70%" alt="Model Performance Comparison">
@@ -125,32 +125,4 @@ The models were evaluated based on their Root Mean Squared Error (RMSE) and R² 
 | **XGBoost Regressor** | **38.44** | **81.20%** |
 *(Data sourced from project presentation)*
 
-**Key Finding:** The **XGBoost Regressor** provided the highest accuracy (81.20%) and the lowest error (RMSE: 38.44), making it the most reliable model for predicting sales. The Random Forest model, while strong, showed signs of overfitting compared to the boosting models.
-
-## 🛠️ Tools & Technologies Used
-
-* **Python:** Core programming language for analysis and modeling.
-* **Pandas:** For data manipulation, cleaning, and preprocessing.
-* **Matplotlib & Seaborn:** For exploratory data analysis and visualization.
-* **Scikit-learn (sklearn):** For data splitting, standardization, and implementing Ridge, Random Forest, and Gradient Boosting models.
-* **XGBoost:** For implementing the best-performing XGBoost Regressor model.
-* **Jupyter Notebook:** For interactive code development and analysis.
-
-## 🚀 How to Run This Project
-
-1.  Clone this repository to your local machine:
-    ```sh
-    git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-    ```
-2.  Navigate to the project directory:
-    ```sh
-    cd YOUR_REPO_NAME
-    ```
-3.  Install the required dependencies (you can create a `requirements.txt` file for this):
-    ```sh
-    pip install pandas numpy matplotlib seaborn scikit-learn xgboost jupyter
-    ```
-4.  Open the Jupyter Notebook to view and run the analysis:
-    ```sh
-    jupyter notebook "Superstore Sales Prediction using Machine Learning.ipynb"
-    ```
+**Key Finding:** The **XGBoost Regressor** was the definitive winner, providing the highest accuracy (81.20%) and the lowest error (RMSE: 3
