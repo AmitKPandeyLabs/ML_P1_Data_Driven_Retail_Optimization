@@ -172,3 +172,7 @@ Furthermore, the EDA provided critical business insights, most notably that the 
     ```sh
     jupyter notebook "Superstore_Sales_Prediction_using_Machine_Learning.ipynb"
     ```
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
