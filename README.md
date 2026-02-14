@@ -9,7 +9,7 @@
 
 This repository contains an end-to-end machine learning project on "Data-Driven Retail Optimization." The project focuses on analyzing a large retail dataset to predict sales and uncover actionable business insights.
 
-## 🎯 Project Overview & Business Problem
+##  Project Overview & Business Problem
 
 The retail industry is evolving rapidly, and businesses must leverage data to remain competitive. This project focuses on using data-driven approaches to enhance profitability and streamline operations for a large superstore.
 
@@ -20,7 +20,7 @@ The primary business motivations for this project were:
 
 The technical goal was to preprocess a complex dataset, perform deep exploratory data analysis, and implement several regression models to accurately predict `Sales`.
 
-## 📊 Dataset
+##  Dataset
 
 The dataset is a comprehensive "Superstore" dataset containing transaction-level data for a retail chain. It includes key features such as:
 * `Order Date` & `Ship Date`
@@ -31,7 +31,7 @@ The dataset is a comprehensive "Superstore" dataset containing transaction-level
 * `Discount`
 * `Profit`
 
-## ⚙️ Methodology
+##  Methodology
 
 The project followed a structured machine learning pipeline:
 
@@ -117,7 +117,7 @@ Four different regression models were trained and evaluated to compare performan
 * **XGBoost Regressor:** A high-performance, optimized version of Gradient Boosting, known for its speed and predictive power, often a top choice in machine learning competitions.
 * Hyperparameter tuning was performed on the models to achieve optimal performance.
 
-## 📈 Results & Key Findings
+##  Results & Key Findings
 
 The final models were evaluated based on their Root Mean Squared Error (RMSE) and R² on the test set. The bar chart provides a clear visual summary of the results, comparing the error rates of all tested models and providing the "proof" of the work.
 
@@ -140,12 +140,12 @@ The final models were evaluated based on their Root Mean Squared Error (RMSE) an
 
 **Key Finding:** The **XGBoost Regressor** was the definitive winner, providing the highest accuracy (81.20%) and the lowest error (RMSE: 38.44). This justifies the final model choice and demonstrates a methodical, comparative approach to model selection. The Random Forest model, while strong, showed signs of overfitting (significantly lower training error than test error) compared to the more robust boosting models.
 
-## 📌 Conclusion
+##  Conclusion
 The analysis concludes that the **XGBoost Regressor (RMSE: 38.44, R²: 81.20%)** is the most accurate and suitable model for predicting sales for this dataset.
 
 Furthermore, the EDA provided critical business insights, most notably that the company's discount strategy is a major source of unprofitability, especially in the **'Tables'** and **'Bookcases'** sub-categories. A key business recommendation is to strategically re-evaluate and adjust discount policies for these specific unprofitable product lines to improve overall profitability.
 
-## 🛠️ Tools & Technologies Used
+##  Tools & Technologies Used
 
 * **Python:** Core programming language for analysis and modeling.
 * **Pandas:** For data manipulation, cleaning, and preprocessing.
@@ -154,7 +154,7 @@ Furthermore, the EDA provided critical business insights, most notably that the 
 * **XGBoost:** For implementing the best-performing XGBoost Regressor model.
 * **Jupyter Notebook:** For interactive code development and analysis.
 
-## 🚀 How to Run This Project
+##  How to Run This Project
 
 1.  Clone this repository to your local machine:
     ```sh
